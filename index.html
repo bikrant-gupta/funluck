@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+  <title>Fun-Luck</title>
+  <!-- <link rel="icon" href="logo.png"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="index.js"></script>
+</head>
+<body>
+	<header class="bg-danger">
+		<h1>Do You Want To Check Your Decision Luck Today??</h1>
+	</header>
+	<div class="row description">
+		<div class="offset-md-2 col-12">
+			<div class="btn ques"><h2>Any Question?<hr></h2></div>
+			
+		</div>
+				  	<div class="offset-md-2 col-md-2 col-10 offset-1 table">
+					    <div class="list-group" id="list-tab" role="tablist">
+					      	<a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">How to play?</a>
+					     	<a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Rules</a>
+					      	<a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">How It works?</a>
+					      	<a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">About</a>
+					    </div>
+				  	</div>
+				  	<div class="offset-1 offset-none col-10 col-md-6 tablelist">
+					    <div class="tab-content" id="nav-tabContent">
+						      <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+						      	<ul>
+						      		<li>FIll the box(1st Number) with any value between 0 to 99.</li>
+						      		<li>FIll the box(2nd Number) with any value between 1 to 100.</li>
+						      		<li><b>Remember always 1stNumber should be less than 2nd Number else you will unable to press play button</b>.</li>
+						      		<li><b>Remember always maximun-difference between both number allowed is only 10</b><br> example 1st number=10 2nd number=20 allowed<br> example 1st number=10 2nd number=15 allowed<br> example 1st number=10 2nd number=22 not allowed .</li>
+
+						      		<li>Middle box will automatic Fill by random Number.(not to be filled by you)</li>
+						      		<li>If box becomes green, it means you win(good luck).</li>
+						      		<li>If box becomes red, it means you lose(bad luck).</li>
+
+						      		<li>Go to "How to win" section to know winning calculation.</li>
+						      	</ul>
+						      </div>
+						      <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+						      	<ul>
+						      		<li>If you filled input boxes with valid values then you have to press play button</li>
+						      		<li>This game is based on your luck.</li>
+						      		<li>If random number(value in middle box) will lie in between both 1st and 2nd Number(including both) you will win with some percentage(%).</li>
+						      		<li>More the value between the both number Your % will much higher.</li>
+						      		<li></li>
+						      		<li></li>
+						      	</ul>
+						      </div>
+						      <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+						      	<ul>
+						      		<li>This game is for fun.</li>
+						      		<li>It will just tell you what is % of choosing correct option. </li>
+						      	</ul>
+						      </div>
+						      <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+						      	<ul>
+						      		<li>This game is for fun.</li>
+						      		<li>It will just tell you what is % of choosing correct option. </li>
+						      	</ul>
+						      </div>
+					    </div>
+				  	</div>
+				</div>
+	<div class="container">
+		<div class="row">
+			<div class="offset-4 col-4">
+				<button class="btn btn-primary b3">Let's Play</button>
+			</div>
+
+
+
+			<div class=" offset-md-3 col-ss col-md-6 r-box text-light">
+					<div class="row">
+						<div class="form-group col-12 error text-danger">
+							
+						</div>
+						<div class="col-4">
+						    <label for="n1stn">1st Number(>=0):</label>
+					    </div>
+						<div class="col-4">
+						    <label for="rnum">Fun Number(0-100):</label>
+					  	</div>
+					  	<div class="col-4">
+						    <label for="2ndn">2nd Number(<=100):</label>
+					  	</div>
+					  	<div class="form-group col-4">
+						    <input type="number" class="form-control" id="n1stn" placeholder="0" name="n1stn" required>
+						    <div class="valid-feedback">Valid.</div>
+						    <div class="invalid-feedback">Please fill out this field.</div>
+					    </div>
+						<div class="form-group col-4">
+						    <input type="number" class="form-control" id="rnum" placeholder="" name="rnum" disabled>
+						    <div class="valid-feedback">Valid.</div>
+						    <div class="invalid-feedback">Please fill out this field.</div>
+					  	</div>
+					  	<div class="form-group col-4">
+						    <input type="number" class="form-control" id="n2ndn" placeholder="0" name="n2ndn" required>
+						    <div class="valid-feedback">Valid.</div>
+						    <div class="invalid-feedback">Please fill out this field.</div>
+					  	</div>
+					  	<div class="offset-4 col-4 text-light">
+					  		<button class="btn btn-primary b1"> Play
+					  		</button>
+					  		<button class="btn btn-primary b2"> Re-Play
+					  		</button>
+					  	
+					  	</div>
+					</div>  	
+			</div>
+
+
+
+		</div>
+	</div>
+
+
+
+
+
+</body>
+
+
+
+
+
+
+</html>
